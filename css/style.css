@@ -1,0 +1,390 @@
+/* ==========================================================================
+   STATEFUL CORE NAVIGATION COMPONENT
+   ========================================================================== */
+:root {
+    --nav-purple-dark: #1b0442;
+    --transition-snappy: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 2000px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.site-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    height: 100px; /* Base container space configuration */
+    background: #ffffff; /* Solid white background configuration at initial rest */
+    transition: var(--transition-snappy);
+    display: block;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+}
+
+.header-container {
+    max-width: 1440px;
+    margin: 0 auto;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+}
+
+/* --- LOGO WRAPPER AND ALIGNMENT --- */
+.logo-wrapper {
+    display: flex;
+    align-items: flex-start;
+    height: 100%;
+}
+
+.site-logo {
+    height: 130px; /* Expanded initial view scaling hanging over hero threshold */
+    width: auto;
+    display: block;
+    object-fit: contain;
+    transition: var(--transition-snappy);
+}
+
+/* --- STATE 1 ACTION BUTTON (Split-Box Container Structure) --- */
+.action-btn-stateful {
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 13px;
+    letter-spacing: 0.5px;
+    height: 46px;
+    border-radius: 4px;
+    overflow: hidden;
+    background: #ffffff;
+    color: #1b0442;
+    border: 1.5px solid #1b0442;
+    transition: var(--transition-snappy);
+}
+
+.btn-split-arrow {
+    background: #2b105a;
+    color: #ffffff;
+    width: 46px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-split-arrow::before {
+    content: '↗';
+    font-size: 18px;
+    font-weight: bold;
+    display: block;
+    line-height: 1;
+}
+
+.btn-core-text {
+    padding: 0 24px;
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+/* ==========================================================================
+   SCROLLED CLASSES (Triggered past scroll detection threshold)
+   ========================================================================== */
+.site-header.scrolled {
+    background: var(--nav-purple-dark);
+    height: 80px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.site-header.scrolled .site-logo {
+    height: 60px; /* Fits neatly within standard navbar row */
+}
+
+/* --- STATE 2 ACTION BUTTON (Capsule Morphing Transition) --- */
+.site-header.scrolled .action-btn-stateful {
+    border-radius: 6px;
+    background: #ffffff;
+    color: #1b0442;
+    border: none;
+    padding-left: 20px;
+    flex-direction: row-reverse;
+}
+
+.site-header.scrolled .btn-split-arrow {
+    background: transparent;
+    width: 32px;
+}
+
+.site-header.scrolled .btn-split-arrow::before {
+    content: '→';
+    color: #1b0442;
+    font-size: 18px;
+}
+
+.site-header.scrolled .btn-core-text {
+    padding: 0 8px 0 0;
+}
+
+/* ==========================================================================
+   HERO BANNER COMPONENT STYLES
+   ========================================================================== */
+.hero-section {
+    background: linear-gradient(135deg, #1c0543 0%, #330c76 100%);
+    min-height: 620px;
+    padding-top: 130px; /* Clear tracking space to drop safely beneath header block */
+    padding-bottom: 70px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-container {
+    max-width: 1440px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 50px;
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr 1fr;
+    gap: 30px;
+    align-items: center;
+}
+
+/* --- LEFT COLUMN GOLD TYPOGRAPHY --- */
+.hero-info-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.hero-main-title {
+    color: #e3b677; /* Set typography header entirely to premium gold value */
+    font-size: 44px;
+    font-weight: 800;
+    line-height: 1.25;
+    margin-bottom: 8px;
+    letter-spacing: -0.5px;
+}
+
+.highlight-gold-entire {
+    color: #e3b677;
+}
+
+.hero-subtitle {
+    color: #baafcc;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    margin-bottom: 45px;
+}
+
+.venue-date-badge {
+    display: inline-flex;
+    align-items: center;
+    background: #e3b677;
+    padding: 16px 26px;
+    border-radius: 40px;
+    color: #1b0442;
+    width: max-content;
+}
+
+.badge-venue, .badge-time {
+    display: flex;
+    flex-direction: column;
+}
+
+.badge-venue strong, .badge-time strong {
+    font-size: 15px;
+    font-weight: 800;
+}
+
+.badge-venue span, .badge-time span {
+    font-size: 12px;
+    font-weight: 500;
+    opacity: 0.95;
+}
+
+.badge-divider {
+    width: 1px;
+    height: 32px;
+    background: rgba(27, 4, 66, 0.25);
+    margin: 0 20px;
+}
+
+/* --- CENTER COLUMN VERTICAL SLIDING CAROUSEL ENGINE --- */
+.hero-mosaic-column {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    height: 420px; /* Constrained block view height window */
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    max-width: 380px;
+    margin: 0 auto;
+}
+
+/* Mask overlays on top and bottom to smoothly fade images out like the screenshot */
+.hero-mosaic-column::before,
+.hero-mosaic-column::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 40px;
+    z-index: 2;
+    pointer-events: none;
+}
+.hero-mosaic-column::before {
+    top: 0;
+    background: linear-gradient(to bottom, #1c0543, transparent);
+}
+.hero-mosaic-column::after {
+    bottom: 0;
+    background: linear-gradient(to top, #1c0543, transparent);
+}
+
+.mosaic-vertical-track {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    height: max-content;
+}
+
+/* Tracking Vertical Translation Vectors */
+.track-move-up {
+    animation: scrollVerticalUp 20s linear infinite;
+}
+
+.track-move-down {
+    animation: scrollVerticalDown 20s linear infinite;
+}
+
+/* Pause animations completely on section hover context */
+.hero-mosaic-column:hover .mosaic-vertical-track {
+    animation-play-state: paused;
+}
+
+.mosaic-pill {
+    width: 100%;
+    height: 140px; /* Base height for standard pill */
+    border-radius: 40px;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+/* Alternate pill heights dynamically to capture that staggered organic grid style */
+.mosaic-vertical-track .mosaic-pill:nth-child(even) {
+    height: 180px;
+}
+
+.mosaic-pill img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Pure Mathematical Keyframes for Seamless Vertical Looping */
+@keyframes scrollVerticalUp {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-50%); }
+}
+
+@keyframes scrollVerticalDown {
+    0% { transform: translateY(-50%); }
+    100% { transform: translateY(0); }
+}
+/* --- RIGHT COLUMN COMPACT FORM CONFIGURATIONS --- */
+.hero-form-column {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.enquiry-card-wrapper {
+    background: rgba(255, 255, 255, 0.06);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 35px 30px;
+    width: 100%;
+    max-width: 360px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.enquiry-card-title {
+    color: #ffffff;
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 24px;
+}
+
+.enquiry-form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.form-input-group input {
+    width: 100%;
+    height: 48px;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 6px;
+    padding: 0 16px;
+    color: #ffffff;
+    font-size: 14px;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.form-input-group input::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.submit-action-row {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 10px;
+}
+
+.form-submit-btn-compact {
+    display: flex;
+    align-items: center;
+    height: 44px;
+    width: 140px;
+    background: #2b105a;
+    border: 1.5px solid #ffffff;
+    border-radius: 4px;
+    cursor: pointer;
+    overflow: hidden;
+    padding: 0;
+}
+
+.form-submit-btn-compact .btn-arrow-box {
+    background: #ffffff;
+    color: #1b0442;
+    width: 40px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    font-weight: bold;
+    flex-shrink: 0;
+}
+
+.form-submit-btn-compact .btn-text-box {
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-align: center;
+    width: 100%;
+}
