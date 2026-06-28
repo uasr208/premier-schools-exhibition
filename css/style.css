@@ -388,3 +388,171 @@ body {
     text-align: center;
     width: 100%;
 }
+
+/* ==========================================================================
+   REVISED METRICS DISPLAY (LARGER LEAVES & LESS GAP)
+   ========================================================================== */
+.legacy-metrics-section {
+    background: #ffffff;
+    padding: 60px 0 30px 0;
+    width: 100%;
+}
+
+.metrics-container {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 30px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.metric-card {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 150px;
+    padding: 0 32px; /* Reduced gap to pull leaf images tighter to text content nodes */
+}
+
+/* Scaled up leaf layout anchors matching exact blueprint weights */
+.metric-card::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 52px;   /* Increased from 42px */
+    height: 130px; /* Increased from 112px */
+    background: url('../assets/left_leaf.png') no-repeat center center;
+    background-size: contain;
+}
+
+.metric-card::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 52px;   /* Increased from 42px */
+    height: 130px; /* Increased from 112px */
+    background: url('../assets/right_leaf.png') no-repeat center center;
+    background-size: contain;
+}
+
+.metric-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    line-height: 1.25;
+}
+
+.metric-title-blue {
+    color: #0d2c6c;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.metric-stat-bold {
+    color: #0d2c6c;
+    font-size: 24px;
+    font-weight: 800;
+    margin: 2px 0;
+}
+
+.metric-sub-blue {
+    color: #0d2c6c;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+
+/* ==========================================================================
+   PARTICIPATING SCHOOLS SLIDING ENGINE (DUAL INTERACTIVE TRACKS)
+   ========================================================================== */
+.schools-logobar-section {
+    background: #ffffff;
+    padding: 30px 0 60px 0;
+    width: 100%;
+}
+
+.logobar-container {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 50px;
+    text-align: center;
+}
+
+.logobar-heading {
+    color: #1b0442;
+    font-size: 24px;
+    font-weight: 800;
+    margin-bottom: 40px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+/* Horizontal display window slider frame */
+.marquee-window-wrapper {
+    overflow: hidden;
+    width: 100%;
+    display: flex;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.marquee-track {
+    display: flex;
+    gap: 20px;
+    width: max-content;
+}
+
+/* Speed and direction controls for continuous layout shifting loops */
+.row-dir-forward {
+    animation: slideMarqueeRight 32s linear infinite;
+}
+
+.row-dir-reverse {
+    animation: slideMarqueeLeft 32s linear infinite;
+}
+
+/* Gracefully halt marquee translation sweeps on hover interaction */
+.marquee-window-wrapper:hover .marquee-track {
+    animation-play-state: paused;
+}
+
+.school-logo-item {
+    background: #ffffff;
+    border: 1px solid #eef0f6;
+    border-radius: 4px;
+    height: 90px;
+    width: 180px; /* Locked standard item card column widths */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
+    flex-shrink: 0;
+}
+
+.school-logo-item img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+/* Infinite loop translate metrics */
+@keyframes slideMarqueeLeft {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+@keyframes slideMarqueeRight {
+    0% { transform: translateX(-50%); }
+    100% { transform: translateX(0); }
+}
