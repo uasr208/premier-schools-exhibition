@@ -961,3 +961,179 @@ body {
     font-weight: bold;
     line-height: 1;
 }
+
+
+
+/* ==========================================================================
+   PREMIUM SEAMLESS FOOTER COMPONENT (ENHANCED VERTICAL HEIGHT VARIATION)
+   ========================================================================== */
+.main-footer-system {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    /* Pushes the entire block down to allow the curved section's white canvas space to breathe */
+    margin-top: 50px; 
+}
+
+/* 1. Upper Purple Info Bar Layout Frame */
+.footer-purple-infobar {
+    background: linear-gradient(180deg, #240b54 0%, #150336 100%);
+    padding: 55px 0 50px 0; /* Slightly enhanced internal vertical tracking padding */
+    width: 100%;
+}
+
+.infobar-container {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 30px;
+}
+
+.infobar-column {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Brand Graphic Framing adjustments */
+.logo-brand-box {
+    flex-shrink: 0;
+}
+
+.footer-logo-wrap {
+    background: #ffffff;
+    padding: 6px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.footer-brand-logo {
+    height: 62px;
+    width: auto;
+    display: block;
+    object-fit: contain;
+}
+
+/* Address Block Standard Sub-Structure */
+.info-address-block {
+    display: flex;
+    flex-direction: row !important;
+    gap: 14px;
+    max-width: 270px;
+}
+
+.info-icon-marker {
+    background: rgba(235, 220, 240, 0.15);
+    color: #ebdcf0;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.info-icon-marker svg {
+    width: 18px;
+    height: 18px;
+}
+
+.info-text-nodes {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.info-block-title {
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 700;
+    margin: 0 0 6px 0;
+}
+
+.info-block-paragraph {
+    color: #dcd3f5;
+    font-size: 12.5px;
+    font-weight: 500;
+    line-height: 1.5;
+    margin: 0;
+}
+
+.highlight-phone-links {
+    color: #ffffff;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+}
+
+/* Social Connectivity Panel elements */
+.info-socials-block {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    min-width: 140px;
+}
+
+.socials-block-title {
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 700;
+    margin: 0 0 12px 0;
+}
+
+.socials-icon-row {
+    display: flex;
+    gap: 10px;
+}
+
+.social-icon-anchor {
+    background: rgba(235, 220, 240, 0.15);
+    color: #ebdcf0;
+    width: 34px;
+    height: 34px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.25s ease;
+}
+
+.social-icon-anchor svg {
+    width: 16px;
+    height: 16px;
+}
+
+.social-icon-anchor:hover {
+    background: #ffffff;
+    color: #240b54;
+    transform: translateY(-2px);
+}
+
+
+/* 2. Lower White Baseline Frame Elements (INCREASED HEIGHT EXTENSION) */
+.footer-white-baseline {
+    background: #ffffff;
+    width: 100%;
+    border-top: 1px solid #eef0f6;
+    /* Increased top/bottom padding significantly to amplify the white height segment block */
+    padding: 35px 0 40px 0; 
+}
+
+.baseline-container {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 50px;
+    text-align: center;
+}
+
+.copyright-legal-text {
+    color: #150336;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    margin: 0;
+    letter-spacing: 0.2px;
+}
