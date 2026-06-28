@@ -4,6 +4,30 @@
     --transition-snappy: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.skip-link {
+    position: absolute;
+    left: -9999px;
+    top: auto;
+}
+
+.skip-link:focus {
+    left: 16px;
+    top: 16px;
+    z-index: 10000;
+    background: #ffffff;
+    color: #1b0442;
+    padding: 12px 16px;
+    border-radius: 6px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible {
+    outline: 3px solid #e3b677;
+    outline-offset: 2px;
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -578,6 +602,28 @@ body {
     grid-template-columns: repeat(4, 1fr);
     gap: 24px;
     width: 100%;
+}
+
+.school-cards-dots {
+    display: none;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 20px;
+}
+
+.school-card-dot {
+    width: 10px;
+    height: 10px;
+    border: 0;
+    border-radius: 50%;
+    background: rgba(27, 4, 66, 0.25);
+    padding: 0;
+    cursor: pointer;
+}
+
+.school-card-dot.active {
+    background: #1b0442;
+    transform: scale(1.15);
 }
 
 /* my note: keep this part for reference */
@@ -1274,10 +1320,25 @@ body {
 
     /* my note: keep this part for reference */
     .school-cards-grid {
-        grid-template-columns: 1fr;
+        display: flex;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        scrollbar-width: none;
+        -webkit-overflow-scrolling: touch;
+        gap: 16px;
+        padding-bottom: 6px;
+    }
+    .school-cards-grid::-webkit-scrollbar {
+        display: none;
     }
     .school-category-card {
         height: 320px;
+        min-width: 100%;
+        flex: 0 0 100%;
+        scroll-snap-align: start;
+    }
+    .school-cards-dots {
+        display: flex;
     }
     .choose-school-main-title {
         font-size: 26px;
@@ -1352,6 +1413,25 @@ body {
 }
 
 /* my note: keep this part for reference */
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+
+    .mosaic-vertical-track,
+    .marquee-track,
+    .highlights-scroll-wrapper {
+        animation: none !important;
+    }
+}
+
 @media (max-width: 480px) {
     /* my note: keep this part for reference */
     .hero-main-title {
