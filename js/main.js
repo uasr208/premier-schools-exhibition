@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 function scrollHighlights(direction) {
   const slider = document.getElementById("highlightsSlider");
-  const scrollAmount = 315; // Width of a card + gap size
+  const scrollAmount = 315; // my note: keep this for reference
   if (direction === "left") {
     slider.scrollLeft -= scrollAmount;
   } else {

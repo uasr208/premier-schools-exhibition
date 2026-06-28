@@ -1,6 +1,4 @@
-/* ==========================================================================
-   STATEFUL CORE NAVIGATION COMPONENT
-   ========================================================================== */
+/* my note: keep this part for reference */
 :root {
     --nav-purple-dark: #1b0442;
     --transition-snappy: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -19,8 +17,8 @@ body {
     left: 0;
     width: 100%;
     z-index: 1000;
-    height: 100px; /* Base container space configuration */
-    background: #ffffff; /* Solid white background configuration at initial rest */
+    height: 100px; /* my note: keep this part for reference */
+    background: #ffffff; /* my note: keep this part for reference */
     transition: var(--transition-snappy);
     display: block;
     box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
@@ -36,7 +34,7 @@ body {
     padding: 0 50px;
 }
 
-/* --- LOGO WRAPPER AND ALIGNMENT --- */
+/* my note: keep this part for reference */
 .logo-wrapper {
     display: flex;
     align-items: flex-start;
@@ -44,14 +42,14 @@ body {
 }
 
 .site-logo {
-    height: 130px; /* Expanded initial view scaling hanging over hero threshold */
+    height: 130px; /* my note: keep this part for reference */
     width: auto;
     display: block;
     object-fit: contain;
     transition: var(--transition-snappy);
 }
 
-/* --- STATE 1 ACTION BUTTON (Split-Box Container Structure) --- */
+/* my note: keep this part for reference */
 .action-btn-stateful {
     display: inline-flex;
     align-items: center;
@@ -93,9 +91,7 @@ body {
     height: 100%;
 }
 
-/* ==========================================================================
-   SCROLLED CLASSES (Triggered past scroll detection threshold)
-   ========================================================================== */
+/* my note: keep this part for reference */
 .site-header.scrolled {
     background: var(--nav-purple-dark);
     height: 80px;
@@ -103,10 +99,10 @@ body {
 }
 
 .site-header.scrolled .site-logo {
-    height: 60px; /* Fits neatly within standard navbar row */
+    height: 60px; /* my note: keep this part for reference */
 }
 
-/* --- STATE 2 ACTION BUTTON (Capsule Morphing Transition) --- */
+/* my note: keep this part for reference */
 .site-header.scrolled .action-btn-stateful {
     border-radius: 6px;
     background: #ffffff;
@@ -131,13 +127,11 @@ body {
     padding: 0 8px 0 0;
 }
 
-/* ==========================================================================
-   HERO BANNER COMPONENT STYLES
-   ========================================================================== */
+/* my note: keep this part for reference */
 .hero-section {
     background: linear-gradient(135deg, #1c0543 0%, #330c76 100%);
     min-height: 620px;
-    padding-top: 130px; /* Clear tracking space to drop safely beneath header block */
+    padding-top: 130px; /* my note: keep this part for reference */
     padding-bottom: 70px;
     display: flex;
     align-items: center;
@@ -156,14 +150,14 @@ body {
     align-items: center;
 }
 
-/* --- LEFT COLUMN GOLD TYPOGRAPHY --- */
+/* my note: keep this part for reference */
 .hero-info-column {
     display: flex;
     flex-direction: column;
 }
 
 .hero-main-title {
-    color: #e3b677; /* Set typography header entirely to premium gold value */
+    color: #e3b677; /* my note: keep this part for reference */
     font-size: 44px;
     font-weight: 800;
     line-height: 1.25;
@@ -216,12 +210,12 @@ body {
     margin: 0 20px;
 }
 
-/* --- CENTER COLUMN VERTICAL SLIDING CAROUSEL ENGINE --- */
+/* my note: keep this part for reference */
 .hero-mosaic-column {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 12px;
-    height: 420px; /* Constrained block view height window */
+    height: 420px; /* my note: keep this part for reference */
     overflow: hidden;
     position: relative;
     width: 100%;
@@ -229,7 +223,7 @@ body {
     margin: 0 auto;
 }
 
-/* Mask overlays on top and bottom to smoothly fade images out like the screenshot */
+/* my note: keep this part for reference */
 .hero-mosaic-column::before,
 .hero-mosaic-column::after {
     content: '';
@@ -256,7 +250,7 @@ body {
     height: max-content;
 }
 
-/* Tracking Vertical Translation Vectors */
+/* my note: keep this part for reference */
 .track-move-up {
     animation: scrollVerticalUp 20s linear infinite;
 }
@@ -265,20 +259,20 @@ body {
     animation: scrollVerticalDown 20s linear infinite;
 }
 
-/* Pause animations completely on section hover context */
+/* my note: keep this part for reference */
 .hero-mosaic-column:hover .mosaic-vertical-track {
     animation-play-state: paused;
 }
 
 .mosaic-pill {
     width: 100%;
-    height: 140px; /* Base height for standard pill */
+    height: 140px; /* my note: keep this part for reference */
     border-radius: 40px;
     overflow: hidden;
     flex-shrink: 0;
 }
 
-/* Alternate pill heights dynamically to capture that staggered organic grid style */
+/* my note: keep this part for reference */
 .mosaic-vertical-track .mosaic-pill:nth-child(even) {
     height: 180px;
 }
@@ -290,7 +284,7 @@ body {
     display: block;
 }
 
-/* Pure Mathematical Keyframes for Seamless Vertical Looping */
+/* my note: keep this part for reference */
 @keyframes scrollVerticalUp {
     0% { transform: translateY(0); }
     100% { transform: translateY(-50%); }
@@ -300,7 +294,7 @@ body {
     0% { transform: translateY(-50%); }
     100% { transform: translateY(0); }
 }
-/* --- RIGHT COLUMN COMPACT FORM CONFIGURATIONS --- */
+/* my note: keep this part for reference */
 .hero-form-column {
     display: flex;
     justify-content: flex-end;
@@ -389,9 +383,7 @@ body {
     width: 100%;
 }
 
-/* ==========================================================================
-   REVISED METRICS DISPLAY (LARGER LEAVES & LESS GAP)
-   ========================================================================== */
+/* my note: keep this part for reference */
 .legacy-metrics-section {
     background: #ffffff;
     padding: 60px 0 30px 0;
@@ -415,18 +407,18 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 150px;
-    padding: 0 32px; /* Reduced gap to pull leaf images tighter to text content nodes */
+    padding: 0 32px; /* my note: keep this part for reference */
 }
 
-/* Scaled up leaf layout anchors matching exact blueprint weights */
+/* my note: keep this part for reference */
 .metric-card::before {
     content: '';
     position: absolute;
     left: 0;
     top: 50%;
     transform: translateY(-50%);
-    width: 52px;   /* Increased from 42px */
-    height: 130px; /* Increased from 112px */
+    width: 52px;   /* my note: keep this part for reference */
+    height: 130px; /* my note: keep this part for reference */
     background: url('../assets/left_leaf.png') no-repeat center center;
     background-size: contain;
 }
@@ -437,8 +429,8 @@ body {
     right: 0;
     top: 50%;
     transform: translateY(-50%);
-    width: 52px;   /* Increased from 42px */
-    height: 130px; /* Increased from 112px */
+    width: 52px;   /* my note: keep this part for reference */
+    height: 130px; /* my note: keep this part for reference */
     background: url('../assets/right_leaf.png') no-repeat center center;
     background-size: contain;
 }
@@ -472,9 +464,7 @@ body {
 }
 
 
-/* ==========================================================================
-   PARTICIPATING SCHOOLS SLIDING ENGINE (DUAL INTERACTIVE TRACKS)
-   ========================================================================== */
+/* my note: keep this part for reference */
 .schools-logobar-section {
     background: #ffffff;
     padding: 30px 0 60px 0;
@@ -496,7 +486,7 @@ body {
     font-family: 'Plus Jakarta Sans', sans-serif;
 }
 
-/* Horizontal display window slider frame */
+/* my note: keep this part for reference */
 .marquee-window-wrapper {
     overflow: hidden;
     width: 100%;
@@ -511,7 +501,7 @@ body {
     width: max-content;
 }
 
-/* Speed and direction controls for continuous layout shifting loops */
+/* my note: keep this part for reference */
 .row-dir-forward {
     animation: slideMarqueeRight 32s linear infinite;
 }
@@ -520,7 +510,7 @@ body {
     animation: slideMarqueeLeft 32s linear infinite;
 }
 
-/* Gracefully halt marquee translation sweeps on hover interaction */
+/* my note: keep this part for reference */
 .marquee-window-wrapper:hover .marquee-track {
     animation-play-state: paused;
 }
@@ -530,7 +520,7 @@ body {
     border: 1px solid #eef0f6;
     border-radius: 4px;
     height: 90px;
-    width: 180px; /* Locked standard item card column widths */
+    width: 180px; /* my note: keep this part for reference */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -546,7 +536,7 @@ body {
     display: block;
 }
 
-/* Infinite loop translate metrics */
+/* my note: keep this part for reference */
 @keyframes slideMarqueeLeft {
     0% { transform: translateX(0); }
     100% { transform: translateX(-50%); }
@@ -559,9 +549,7 @@ body {
 
 
 
-/* ==========================================================================
-   CHOOSE YOUR SCHOOL GRID COMPONENT STYLE
-   ========================================================================== */
+/* my note: keep this part for reference */
 .choose-school-section {
     background: #ffffff;
     padding: 60px 0 80px 0;
@@ -584,7 +572,7 @@ body {
     letter-spacing: -0.5px;
 }
 
-/* 4-Column Responsive Grid Architecture */
+/* my note: keep this part for reference */
 .school-cards-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -592,19 +580,19 @@ body {
     width: 100%;
 }
 
-/* Individual Card Structural Core */
+/* my note: keep this part for reference */
 .school-category-card {
     position: relative;
     border-radius: 16px;
     overflow: hidden;
-    height: 420px; /* Perfectly scales to capture original viewport scale */
+    height: 420px; /* my note: keep this part for reference */
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
 }
 
-/* Image container with strict layer ordering */
+/* my note: keep this part for reference */
 .card-image-box {
     position: absolute;
     top: 0;
@@ -622,12 +610,12 @@ body {
     transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Smooth zoom effect on hover */
+/* my note: keep this part for reference */
 .school-category-card:hover .card-image-box img {
     transform: scale(1.04);
 }
 
-/* Precise linear gradient matching the dark overlay/tint from the screenshot */
+/* my note: keep this part for reference */
 .card-tint-overlay {
     position: absolute;
     top: 0;
@@ -644,7 +632,7 @@ body {
     pointer-events: none;
 }
 
-/* Text Container Stacked Securely Over Overlays */
+/* my note: keep this part for reference */
 .card-text-content {
     position: relative;
     z-index: 3;
@@ -671,9 +659,7 @@ body {
 
 
 
-/* ==========================================================================
-   PARENTS APPOINTMENTS SECTION WITH HORIZONTAL BLEND MASK
-   ========================================================================== */
+/* my note: keep this part for reference */
 .parents-appointment-section {
     position: relative;
     width: 100%;
@@ -684,7 +670,7 @@ body {
     align-items: center;
 }
 
-/* Background image positioning restricted to the right half of the banner */
+/* my note: keep this part for reference */
 .parents-bg-image-box {
     position: absolute;
     top: 0;
@@ -701,7 +687,7 @@ body {
     display: block;
 }
 
-/* The magic layer: Fades the solid pinkish background into the image transparently */
+/* my note: keep this part for reference */
 .horizontal-gradient-mask {
     position: absolute;
     top: 0;
@@ -718,14 +704,14 @@ body {
     pointer-events: none;
 }
 
-/* Structural Layout Content Box */
+/* my note: keep this part for reference */
 .parents-section-container {
     max-width: 1440px;
     width: 100%;
     margin: 0 auto;
     padding: 0 50px;
     position: relative;
-    z-index: 2; /* Ensures content sits comfortably above the background photo mask */
+    z-index: 2; /* my note: keep this part for reference */
 }
 
 .parents-content-column {
@@ -733,7 +719,7 @@ body {
     font-family: 'Plus Jakarta Sans', sans-serif;
 }
 
-/* Typography styles matching the exact weights & colors in Screenshot 2026-06-28 121314_3.jpg */
+/* my note: keep this part for reference */
 .parents-italic-tag {
     color: #9254a6;
     font-size: 20px;
@@ -760,7 +746,7 @@ body {
     margin: 0 0 35px 0;
 }
 
-/* Split CTA Framework Implementation */
+/* my note: keep this part for reference */
 .parents-action-row {
     display: flex;
     justify-content: flex-start;
@@ -809,15 +795,13 @@ body {
 
 
 
-/* ==========================================================================
-   WHAT MAKES THIS EXHIBITION A MUST-VISIT SECTION 
-   ========================================================================== */
+/* my note: keep this part for reference */
 .exhibition-highlights-section {
-    background: #1e0b4a; /* Deep luxury dark indigo background matching screenshot text header spaces */
+    background: #1e0b4a; /* my note: keep this part for reference */
     padding: 60px 0 120px 0;
     width: 100%;
     position: relative;
-    /* Implements the unique elegant sweeping layout arc bottom shape seamlessly */
+    /* my note: keep this part for reference */
     clip-path: ellipse(110% 100% at 50% 0%);
     overflow: hidden;
 }
@@ -841,7 +825,7 @@ body {
     letter-spacing: -0.3px;
 }
 
-/* Horizontal Scroll Window Setup */
+/* my note: keep this part for reference */
 .highlights-scroll-wrapper {
     display: flex;
     gap: 20px;
@@ -849,14 +833,14 @@ body {
     overflow-x: auto;
     scroll-behavior: smooth;
     padding: 10px 0 30px 0;
-    scrollbar-width: none; /* Hidden scrollbars to protect aesthetics */
+    scrollbar-width: none; /* my note: keep this part for reference */
 }
 
 .highlights-scroll-wrapper::-webkit-scrollbar {
-    display: none; /* Hide scrollbar for Chrome/Safari */
+    display: none; /* my note: keep this part for reference */
 }
 
-/* Feature Item Grid Cards */
+/* my note: keep this part for reference */
 .highlight-feature-card {
     background: linear-gradient(to bottom, #ebdcf0 0%, #e5d1f2 100%);
     border-radius: 16px;
@@ -877,7 +861,7 @@ body {
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
 }
 
-/* Icon Graphics Frame rules */
+/* my note: keep this part for reference */
 .feature-icon-box {
     width: 50px;
     height: 50px;
@@ -893,7 +877,7 @@ body {
     object-fit: contain;
 }
 
-/* Typography styles match weights exactly */
+/* my note: keep this part for reference */
 .feature-card-title {
     color: #1e0b4a;
     font-family: 'Plus Jakarta Sans', sans-serif;
@@ -913,7 +897,7 @@ body {
     margin: 0;
 }
 
-/* Center Slider Action Navigation Controls Layer */
+/* my note: keep this part for reference */
 .slider-navigation-controls {
     display: flex;
     gap: 15px;
@@ -964,21 +948,19 @@ body {
 
 
 
-/* ==========================================================================
-   PREMIUM SEAMLESS FOOTER COMPONENT (ENHANCED VERTICAL HEIGHT VARIATION)
-   ========================================================================== */
+/* my note: keep this part for reference */
 .main-footer-system {
     width: 100%;
     display: flex;
     flex-direction: column;
-    /* Pushes the entire block down to allow the curved section's white canvas space to breathe */
+    /* my note: keep this part for reference */
     margin-top: 50px; 
 }
 
-/* 1. Upper Purple Info Bar Layout Frame */
+/* my note: keep this part for reference */
 .footer-purple-infobar {
     background: linear-gradient(180deg, #240b54 0%, #150336 100%);
-    padding: 55px 0 50px 0; /* Slightly enhanced internal vertical tracking padding */
+    padding: 55px 0 50px 0; /* my note: keep this part for reference */
     width: 100%;
 }
 
@@ -997,7 +979,7 @@ body {
     flex-direction: column;
 }
 
-/* Brand Graphic Framing adjustments */
+/* my note: keep this part for reference */
 .logo-brand-box {
     flex-shrink: 0;
 }
@@ -1019,7 +1001,7 @@ body {
     object-fit: contain;
 }
 
-/* Address Block Standard Sub-Structure */
+/* my note: keep this part for reference */
 .info-address-block {
     display: flex;
     flex-direction: row !important;
@@ -1071,7 +1053,7 @@ body {
     letter-spacing: 0.3px;
 }
 
-/* Social Connectivity Panel elements */
+/* my note: keep this part for reference */
 .info-socials-block {
     font-family: 'Plus Jakarta Sans', sans-serif;
     min-width: 140px;
@@ -1113,12 +1095,12 @@ body {
 }
 
 
-/* 2. Lower White Baseline Frame Elements (INCREASED HEIGHT EXTENSION) */
+/* my note: keep this part for reference */
 .footer-white-baseline {
     background: #ffffff;
     width: 100%;
     border-top: 1px solid #eef0f6;
-    /* Increased top/bottom padding significantly to amplify the white height segment block */
+    /* my note: keep this part for reference */
     padding: 35px 0 40px 0; 
 }
 
@@ -1140,27 +1122,23 @@ body {
 
 
 
-/* ==========================================================================
-   RESPONSIVE MEDIA QUERIES (TABLET, MOBILE & COMPACT OVERRIDES)
-   ========================================================================== */
+/* my note: keep this part for reference */
 
-/* --------------------------------------------------------------------------
-   1. TABLET VIEW (Max Width: 1024px)
-   -------------------------------------------------------------------------- */
+/* my note: keep this part for reference */
 @media (max-width: 1024px) {
-    /* Global Container Adjustments */
+    /* my note: keep this part for reference */
     .header-container, .hero-container, .metrics-container, 
     .logobar-container, .choose-school-container, .parents-section-container, 
     .infobar-container, .baseline-container {
         padding: 0 30px;
     }
 
-    /* Header Navigation */
+    /* my note: keep this part for reference */
     .site-logo {
         height: 90px;
     }
 
-    /* Hero Section Reflow (Stack text full-width, split mosaic & form) */
+    /* my note: keep this part for reference */
     .hero-container {
         grid-template-columns: 1fr 1fr;
         row-gap: 50px;
@@ -1177,41 +1155,39 @@ body {
         justify-content: center;
     }
 
-    /* Metrics Grid (2x2) */
+    /* my note: keep this part for reference */
     .metrics-container {
         grid-template-columns: repeat(2, 1fr);
         gap: 40px;
     }
 
-    /* Choose Your School Grid (2x2) */
+    /* my note: keep this part for reference */
     .school-cards-grid {
         grid-template-columns: repeat(2, 1fr);
     }
 
-    /* Parents Banner Adjustments */
+    /* my note: keep this part for reference */
     .parents-bg-image-box {
         width: 50%;
     }
 
-    /* Footer Grid Wrap */
+    /* my note: keep this part for reference */
     .infobar-container {
         flex-wrap: wrap;
         justify-content: center;
     }
 }
 
-/* --------------------------------------------------------------------------
-   2. MOBILE VIEW (Max Width: 768px)
-   -------------------------------------------------------------------------- */
+/* my note: keep this part for reference */
 @media (max-width: 768px) {
-    /* Global Mobile Paddings */
+    /* my note: keep this part for reference */
     .header-container, .hero-container, .metrics-container, 
     .logobar-container, .choose-school-container, .parents-section-container, 
     .infobar-container, .baseline-container {
         padding: 0 20px;
     }
 
-    /* --- Mobile Header --- */
+    /* my note: keep this part for reference */
     .site-header {
         height: 85px;
     }
@@ -1232,12 +1208,12 @@ body {
         width: 40px;
     }
 
-    /* --- Mobile Hero Section --- */
+    /* my note: keep this part for reference */
     .hero-section {
         padding-top: 110px;
     }
     .hero-container {
-        grid-template-columns: 1fr; /* Single Column Stack */
+        grid-template-columns: 1fr; /* my note: keep this part for reference */
         row-gap: 40px;
     }
     .hero-info-column {
@@ -1249,7 +1225,7 @@ body {
     .hero-subtitle {
         margin-bottom: 25px;
     }
-    /* Wrap the badge naturally on mobile */
+    /* my note: keep this part for reference */
     .venue-date-badge {
         flex-direction: column;
         text-align: center;
@@ -1262,7 +1238,7 @@ body {
         margin: 5px 0;
     }
     
-    /* Hero Mosaic: Hide one column & reduce height for mobile flow */
+    /* my note: keep this part for reference */
     .hero-mosaic-column {
         grid-template-columns: repeat(2, 1fr);
         height: 320px;
@@ -1275,7 +1251,7 @@ body {
         padding: 30px 20px;
     }
 
-    /* --- Mobile Metrics List --- */
+    /* my note: keep this part for reference */
     .metrics-container {
         grid-template-columns: 1fr;
         gap: 30px;
@@ -1289,14 +1265,14 @@ body {
         height: 100px;
     }
 
-    /* --- Mobile Marquees --- */
+    /* my note: keep this part for reference */
     .school-logo-item {
         height: 70px;
         width: 140px;
         padding: 8px;
     }
 
-    /* --- Mobile School Cards --- */
+    /* my note: keep this part for reference */
     .school-cards-grid {
         grid-template-columns: 1fr;
     }
@@ -1308,7 +1284,7 @@ body {
         margin-bottom: 30px;
     }
 
-    /* --- Mobile Parents Split Banner --- */
+    /* my note: keep this part for reference */
     .parents-appointment-section {
         flex-direction: column;
         justify-content: center;
@@ -1318,10 +1294,10 @@ body {
         position: relative;
         width: 100%;
         height: 300px;
-        order: 2; /* Push image below the text block on mobile */
+        order: 2; /* my note: keep this part for reference */
     }
     .horizontal-gradient-mask {
-        /* Shift gradient to a vertical fade downward */
+        /* my note: keep this part for reference */
         background: linear-gradient(to bottom, #ebdcf0 0%, rgba(235, 220, 240, 0.4) 30%, transparent 100%);
     }
     .parents-section-container {
@@ -1339,12 +1315,12 @@ body {
         justify-content: center;
     }
 
-    /* --- Mobile Exhibition Slider --- */
+    /* my note: keep this part for reference */
     .exhibition-highlights-section {
-        clip-path: ellipse(150% 100% at 50% 0%); /* Flattens the bottom curve slightly for mobile */
+        clip-path: ellipse(150% 100% at 50% 0%); /* my note: keep this part for reference */
     }
     .highlight-feature-card {
-        min-width: 80vw; /* Allows the next card to peek into view for obvious swiping */
+        min-width: 80vw; /* my note: keep this part for reference */
         height: 290px;
     }
     .highlights-main-heading {
@@ -1352,7 +1328,7 @@ body {
         margin-bottom: 30px;
     }
 
-    /* --- Mobile Footer Reflow --- */
+    /* my note: keep this part for reference */
     .infobar-container {
         flex-direction: column;
         align-items: center;
@@ -1375,11 +1351,9 @@ body {
     }
 }
 
-/* --------------------------------------------------------------------------
-   3. SMALL MOBILE & COMPACT VIEW (Max Width: 480px)
-   -------------------------------------------------------------------------- */
+/* my note: keep this part for reference */
 @media (max-width: 480px) {
-    /* Scale specific typography elements so they never break the viewport layout */
+    /* my note: keep this part for reference */
     .hero-main-title {
         font-size: 28px;
     }
@@ -1387,7 +1361,7 @@ body {
         font-size: 28px;
     }
     
-    /* Dynamically shrink the header button padding so it fits next to the logo */
+    /* my note: keep this part for reference */
     .btn-core-text {
         padding: 0 10px;
         font-size: 10px;
