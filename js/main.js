@@ -12,3 +12,13 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
+
+function scrollHighlights(direction) {
+  const slider = document.getElementById("highlightsSlider");
+  const scrollAmount = 315; // Width of a card + gap size
+  if (direction === "left") {
+    slider.scrollLeft -= scrollAmount;
+  } else {
+    slider.scrollLeft += scrollAmount;
+  }
+}
